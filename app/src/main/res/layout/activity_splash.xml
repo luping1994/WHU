@@ -1,90 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_loading"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:id="@+id/layout_loading"
-    android:gravity="center"
     android:background="@color/bg_action"
+    android:gravity="center"
     android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_marginTop="24dp"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/colorPrimary"
+        app:paddingStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/Toolbar"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
     <LinearLayout
+        android:id="@+id/layout1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:id="@+id/layout1"
-        >
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dip"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="20dip"
             android:layout_weight="2"
             android:gravity="center"
-            android:layout_marginTop="20dip"
-            android:layout_marginBottom="20dip"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dip"
                 android:gravity="center"
-                android:textSize="30sp"
+                android:paddingTop="10dip"
+                android:text="武 汉 大 学"
                 android:textColor="@color/white"
-                android:text="武 汉 大 学"/>
+                android:textSize="30sp" />
+
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dip"
                 android:gravity="center"
-                android:textSize="20sp"
+                android:paddingTop="10dip"
+                android:text="学生公寓用电管理信息化系统"
                 android:textColor="@color/white"
-                android:text="学生公寓用电管理信息化系统"/>
+                android:textSize="20sp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="10dip"
             android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
             android:orientation="vertical">
+
             <ImageView
-                android:layout_height="130dip"
                 android:layout_width="130dip"
+                android:layout_height="130dip"
                 android:layout_gravity="center"
                 android:scaleType="fitXY"
-                android:src="@drawable/logo_whu"/>
+                android:src="@drawable/logo_whu" />
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0dip"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
+
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="80dip"
             android:layout_marginTop="20dip"
             android:scaleType="center"
-            android:src="@drawable/logo_suntrans"
-            />
+            android:src="@drawable/logo_suntrans" />
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginBottom="20dip"
             android:layout_marginTop="10dip"
-            android:textSize="16sp"
+            android:gravity="center"
+            android:text="广州三川控制系统工程设备有限公司"
             android:textColor="@color/white"
-            android:text="广州三川控制系统工程设备有限公司"/>
+            android:textSize="16sp" />
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/layout2"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="horizontal"
-        android:id="@+id/layout2"
         android:gravity="center"
+        android:orientation="horizontal"
         android:visibility="gone">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="您不属于本系统！"
             android:textColor="@color/white"
-            android:textSize="21sp"/>
+            android:textSize="21sp" />
     </LinearLayout>
 </LinearLayout>

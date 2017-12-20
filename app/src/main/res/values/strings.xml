@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WHU</string>
+    <string name="tips_net_work_is_unused">网络连接不可用</string>
+    <string name="sushe">宿舍</string>
+    <string name="radio_student">学生</string>
+    <string name="zonghe">综合</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -4,9 +4,12 @@
     <color name="colorPrimaryDark">#ff50A0D2</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#ffffff</color>
-
     <!-- 通用页面默认背景颜色 -->
     <color name="bg_color">#ffC6E2FF</color>
     <!-- 通用标题栏背景颜色 -->
     <color name="bg_action">#ff50A0D2</color>
+    <!--登录按钮背景颜色-->
+    <color name="bg_btn">#ff63B8FF</color>
+    <color name="bg_btn_pressed">#FF31677C</color>
+
 </resources>
