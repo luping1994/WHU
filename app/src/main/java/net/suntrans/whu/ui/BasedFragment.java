@@ -10,7 +10,7 @@ import io.reactivex.disposables.CompositeDisposable;
  */
 
 public class BasedFragment extends Fragment {
-    private final CompositeDisposable mDisposable = new CompositeDisposable();
+    protected final CompositeDisposable mDisposable = new CompositeDisposable();
 
     @Override
     public void onStop() {

@@ -1,9 +1,13 @@
 package net.suntrans.whu.utils;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
+import android.util.Log;
+
+import com.squareup.haha.trove.THash;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -14,6 +18,7 @@ import java.io.FileOutputStream;
  */
 
 public class FileUtils {
+    private static final String TAG = "FileUtils";
     public static File compressImage(String filePath, String targetPath, int quality)  {
         Bitmap bm = getSmallBitmap(filePath);//获取一定尺寸的图片
         int degree = readPictureDegree(filePath);//获取相片拍摄角度
@@ -105,6 +110,22 @@ public class FileUtils {
             inSampleSize = heightRatio < widthRatio ? heightRatio : widthRatio;
         }
         return inSampleSize;
+    }
+
+    public static File getCacheDir(Context context, String cacheName) {
+        File cacheDir = context.getCacheDir();
+        if (cacheDir != null) {
+            File result = new File(cacheDir, cacheName);
+            if (!result.mkdirs() && (!result.exists() || !result.isDirectory())) {
+                // File wasn't able to create a directory, or the result exists but not a directory
+                return null;
+            }
+            return result;
+        }
+        if (Log.isLoggable(TAG, Log.ERROR)) {
+            Log.e(TAG, "default disk cache dir is null");
+        }
+        return null;
     }
 
 

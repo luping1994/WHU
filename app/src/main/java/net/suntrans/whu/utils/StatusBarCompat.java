@@ -85,7 +85,7 @@ public class StatusBarCompat {
 
     public static void compat(View view){
         View statusBar = view;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             int statusBarHeight = StatusBarCompat.getStatusBarHeight(getContext());
             LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) statusBar.getLayoutParams();
             params.height = statusBarHeight;

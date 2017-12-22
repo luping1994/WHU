@@ -3,6 +3,7 @@ package net.suntrans.whu.netapi;
 import android.content.Context;
 
 
+import net.suntrans.whu.App;
 import net.suntrans.whu.R;
 import net.suntrans.whu.utils.UiUtils;
 
@@ -18,16 +19,16 @@ import retrofit2.HttpException;
  */
 
 public class ApiErrorHelper {
-    public static void handleCommonError(final Context context, Throwable e) {
+    public static void handleCommonError(Throwable e) {
         if (e instanceof HttpException) {
             if (e != null) {
                 HttpException exception = (HttpException) e;
                 if (e.getMessage() != null) {
                     if (exception.code() == 401) {
                         UiUtils.showToast("账号或密码错误");
-                    }else if (exception.code()==500){
+                    } else if (exception.code() == 500) {
                         UiUtils.showToast("服务器内部错误");
-                    }else if (exception.code()==404){
+                    } else if (exception.code() == 404) {
                         UiUtils.showToast("404 Not Found");
                     }
                 }
@@ -50,7 +51,7 @@ public class ApiErrorHelper {
             if (e instanceof SocketTimeoutException || e instanceof UnknownHostException) {
                 UiUtils.showToast("连接失败,请重试！");
             } else {
-                UiUtils.showToast(context.getString(R.string.tips_net_work_is_unused));
+                UiUtils.showToast(App.getApplication().getString(R.string.tips_net_work_is_unused));
             }
 
         } else {

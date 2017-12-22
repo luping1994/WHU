@@ -67,17 +67,20 @@ dependencies {
     //BaseRecyclerViewAdapterHelper:一个通用的Recyclerview Adapter
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
 
+    //RxBinding
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation project(':looney')
+
     // Resolve conflicts between main and test APK:
     androidTestImplementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
     androidTestImplementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     androidTestImplementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     androidTestImplementation "com.android.support:design:$rootProject.supportLibraryVersion"
 
-    //RxBinding
-    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
     //调试用
     compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-    implementation project(':looney')
+    //okhttp loging intercept
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
 }

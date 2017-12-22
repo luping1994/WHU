@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_action"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+        <!-- 标题栏 -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@color/bg_action"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_back"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:background="@drawable/bg_back"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="35dip"
+                    android:layout_gravity="center"
+                    android:contentDescription="返回"
+                    android:paddingRight="-8dip"
+                    android:src="@drawable/ic_back_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip"
+                    android:layout_marginRight="8dip"
+                    android:gravity="center"
+                    android:text="返回"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dip"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="设置"
+                android:textColor="#ffffff"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="50dip"
+                android:layout_height="35dip"
+                android:layout_marginRight="10dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx0"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="25dip"
+                android:background="@drawable/item_selector"
+                android:gravity="center|left"
+                android:paddingLeft="15dip"
+                android:text="修改手机号"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tx1"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/item_selector"
+                android:gravity="center|left"
+                android:paddingLeft="15dip"
+                android:text="修改密码"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:id="@+id/update"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/item_selector"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dip"
+                    android:gravity="center|left"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:text="版本更新"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/img_new"
+                    android:layout_width="28dip"
+                    android:layout_height="28dip"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_new"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="0dip"
+                    android:layout_height="45dip"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:paddingRight="15dip"
+                    android:text="当前版本v1.1"
+                    android:textColor="@color/grey"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tx2"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/item_selector"
+                android:gravity="center|left"
+                android:paddingLeft="15dip"
+                android:text="关于"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tx3"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/item_selector"
+                android:gravity="center|left"
+                android:paddingLeft="15dip"
+                android:text="注销登录"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tx4"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="25dip"
+                android:background="@drawable/item_selector"
+                android:gravity="center|left"
+                android:paddingLeft="15dip"
+                android:text="退出程序"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

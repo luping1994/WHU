@@ -78,6 +78,5 @@ public class UserDaoTest {
     @Test
     public void updateUserDao() {
 
-        mDatabase.userDao().updateUserTable(0);
     }
 }

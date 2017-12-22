@@ -37,13 +37,6 @@ public class SplashActivity extends BasedActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        instance = AppDatabase.getInstance(this);
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayHomeAsUpEnabled(false);
-
         Intent intent = getIntent();
         if (intent != null) {
             String m_sign = intent.getStringExtra("m_sign");
@@ -56,8 +49,8 @@ public class SplashActivity extends BasedActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-                finish();
+//                startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+//                finish();
             }
         }, 2000);
     }

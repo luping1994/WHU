@@ -12,4 +12,14 @@
     <color name="bg_btn">#ff63B8FF</color>
     <color name="bg_btn_pressed">#FF31677C</color>
 
+    <color name="secondtextcolor">#c3c3c3</color>
+    <!--一般控件的背景-->
+    <color name="item_press_false">#fafafa</color>
+    <color name="item_press_true">#f2f3f5</color>
+    <color name="item_press_true_selector">#c9c9c9</color>
+    <color name="ripper_color">#c9c9c9</color>
+    <color name="grey">#808080</color>
+    <color name="mask_color">#88888888</color>
+    <color name="drop_down_unselected">#111111</color>
+    <color name="textColor">#333333</color>
 </resources>
